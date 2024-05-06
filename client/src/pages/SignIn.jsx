@@ -1,9 +1,10 @@
-import SignUp from './SignUp.jsx';
+
 
 const SignIn = () => {
   return (
     <div>
-      <SignUp />
+    
+     <h1>Sign in</h1>
     </div>
   )
 }
