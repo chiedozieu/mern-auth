@@ -48,7 +48,7 @@ export const google = async (req, res, next) => {
       const expiryDate = new Date(Date.now() + 3600000); // 1 hr
       res.cookie('access_token', token, {
         httpOnly: true, 
-        expires: expiryDate})
+        expires: expiryDate}).status(200).json(rest);
     }else { 
       const generatedPassword = Math
       .random()
@@ -72,4 +72,4 @@ export const google = async (req, res, next) => {
   } catch (error) {
     next(error);
   }
-}
+} 
