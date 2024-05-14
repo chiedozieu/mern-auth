@@ -46,7 +46,7 @@ const Profile = () => {
       <form className="flex flex-col gap-4">
         <input type="file"  ref={fileRef} hidden accept="image/*" onChange={(e)=> setImage(e.target.files[0])}/>
 
-        <img src={currentUser.profilePicture} alt="profile" 
+        <img src={formData.profilePicture || currentUser.profilePicture} alt="profile" 
           className="h-24 w-24 rounded-full object-cover self-center cursor-pointer mt-2" onClick={() => fileRef.current.click()}/>
         {/* Firebase Storage rules
       allow read;
